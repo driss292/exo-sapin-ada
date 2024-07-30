@@ -65,7 +65,7 @@ function afficherTriangleGauche(n) {
   return str;
 }
 
-console.log(afficherTriangleGauche(5));
+// console.log(afficherTriangleGauche(5));
 
 //     /
 //    /*
@@ -76,7 +76,14 @@ console.log(afficherTriangleGauche(5));
 // 1 - 5 Assemblage et décorations
 
 function afficherPointeSapin(hauteur) {
-  // à remplir
-}
+  // ma méthode avec let str="" est capricieuse
+  console.log(" ".repeat(hauteur) + "+");
 
-// console.log(afficherPointeSapin(4));
+  for (let i = 1; i <= hauteur; i++) {
+    let gauche = " ".repeat(hauteur - i) + "/" + "*".repeat(i - 1);
+    let droite = "*".repeat(i - 1) + "\\";
+
+    console.log(gauche + "|" + droite);
+  }
+}
+afficherPointeSapin(4);
