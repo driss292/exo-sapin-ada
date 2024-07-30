@@ -1,3 +1,5 @@
+// Étape 1
+
 // 1 - 1 Une ligne d'étoiles
 
 function afficherEtoiles(n) {
@@ -86,4 +88,26 @@ function afficherPointeSapin(hauteur) {
     console.log(gauche + "|" + droite);
   }
 }
-afficherPointeSapin(4);
+// afficherPointeSapin(4);
+
+// Étape 2
+
+// 2 - 1
+
+// afficherPointeSapin(1);
+// afficherPointeSapin(2);
+// afficherPointeSapin(3);
+
+function afficherEtage(hauteur, pointe_offset) {
+  // je remplace i = 1 par i = point_offset + 1
+  for (let i = pointe_offset + 1; i <= hauteur; i++) {
+    let gauche = " ".repeat(hauteur - i) + "/" + "*".repeat(i - 1);
+    let droite = "*".repeat(i - 1) + "\\";
+
+    console.log(gauche + "|" + droite);
+  }
+}
+
+afficherEtage(3, 0); // les 3 premières lignes
+afficherEtage(3, 1); // affiche à partir de la deuxième ligne, et continue sur 3 lignes
+afficherEtage(3, 2); // affiche à partie de la troisième lige, et continue sur 3 lignes
